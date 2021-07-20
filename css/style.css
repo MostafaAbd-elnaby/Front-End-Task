@@ -1,0 +1,125 @@
+
+/* Variables*/
+:root {
+    --main-color: #2ce9e9;
+    --secondary-color : #5cb1eb;
+    --transparent-color : #11f0e5ab;
+    --padding-sections : 100px;
+}
+/* Start Global Rules  */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {scroll-behavior: smooth;}
+body {font-family: 'Open Sans', sans-serif;}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+/* Start Special Classes*/
+.main-heading {text-align: center;}
+.main-heading h2 {
+    color: #4c6af180;
+    font-weight: 800;
+    font-size: 100px;
+    text-align: center;
+    margin: 0;
+    letter-spacing: -3px;
+}
+.main-heading p {
+    font-size: 20px;
+    text-align: center;
+    color: rgba(51, 51, 51, 0.527);
+    margin: -25px 0 50px 0;
+}
+/* End Special Classes*/
+/* Start Pricing */
+.pricing {
+    padding-top: var(--padding-sections);
+    padding-bottom: var(--padding-sections);
+}
+.pricing .boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)) ;
+    justify-content: center;
+    column-gap: 50px;
+    align-items: center;
+    row-gap: 50px;
+}
+.pricing .boxes .box-price {
+    text-align: center;
+    background-color: #c4eef028;
+    width: 100%;
+    border: 0;
+    box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2);
+    padding: 50px 30px;
+}
+.pricing .boxes .box-price:hover {background-color: #c4eef007;}
+.pricing .boxes .box-price:hover h3{color: var(--main-color);}
+.pricing .boxes .box-price .head {
+    padding: 30px 20px;
+    border-top: 1px solid var(--transparent-color);
+    border-bottom: 1px solid var(--transparent-color);
+}
+.pricing .boxes .box-price .head h3 {
+    font-weight: normal;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+.pricing .boxes .box-price .head span {
+    position: relative;
+    font-size: 40px;
+    font-weight: 900;
+}
+.pricing .boxes .box-price:hover .head span{color: var(--secondary-color);}
+.pricing .boxes .box-price .head span::before {
+    content: '$';
+    position: absolute;
+    font-size: 30px;
+    top: -13px;
+    left: -20px;
+    font-weight: normal;
+}
+.pricing .boxes .box-price .head span::after {
+    content: '/Mo';
+    position: absolute;
+    font-size: 20px;
+    bottom: 4px;
+    right: -47px;
+}
+.pricing .boxes .box-price ul {
+    list-style: none;
+    border-bottom: 1px solid var(--transparent-color);
+}
+.pricing .boxes .box-price ul li {
+    padding: 20px;
+    position: relative;
+}
+.pricing .boxes .box-price ul li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    border-bottom: 1px solid var(--transparent-color);
+    width: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 58px;
+}
+.pricing .boxes .box-price .foot {
+    padding: 15px 20px;
+    border: 1px solid var(--secondary-color);
+    margin-top: 10px;
+}
+.pricing .boxes .box-price .foot a:hover{color: #333;}
+.pricing .boxes .box-price .foot a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+/* End Pricing */
